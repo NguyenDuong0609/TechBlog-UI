@@ -1,6 +1,22 @@
 # Technical Blog Project
 
-Dự án này là một bản Technical Blog Project, được xây dựng bằng các công nghệ web hiện đại nhằm cung cấp trải nghiệm chia sẻ kiến thức công nghệ mượt mà.
+Dự án này là một Technical Blog Project, được xây dựng bằng các công nghệ web hiện đại (Next.js 16, TailwindCSS, shadcn/ui, Motion) nhằm lưu trữ kiến thức công nghệ, kỹ thuật và các sản phẩm đã xây dựng.
+
+## 📦 Tech Stack
+
+- **Framework**: Next.js 16
+- **Styling**: TailwindCSS
+- **UI Components**: shadcn/ui
+- **Animations**: Motion
+- **Database**: SQLite (Prisma ORM)
+- **State Management**: Zustand
+- **Language**: TypeScript
+
+## 📋 Yêu cầu hệ thống
+
+- Node.js 16+ hoặc 18+
+- npm hoặc yarn
+- Docker (tùy chọn, nếu chạy bằng Docker)
 
 ## 🚀 Hướng dẫn khởi chạy dự án
 
@@ -42,7 +58,7 @@ Sử dụng cho lập trình viên, hỗ trợ hot-reload và tối ưu cho Wind
 docker-compose -f docker-compose.dev.yml up -d
 
 # Xem logs
-docker logs -f viblo-frontend-dev
+docker logs -f techblog-dev
 
 # Khởi chạy lại và ép build lại (khi sửa Dockerfile hoặc package.json)
 docker-compose -f docker-compose.dev.yml up -d --build
@@ -102,3 +118,13 @@ Dự án sử dụng các file cấu hình sau để điều phối hoạt độ
 -   **`Dockerfile.dev` & `Dockerfile.prod`**: Dockerfile dành riêng cho môi trường phát triển và sản xuất.
 -   **`docker-compose.dev.yml` & `docker-compose.prod.yml`**: File cấu hình Compose tương ứng cho từng môi trường.
 -   **`postcss.config.mjs` & `eslint.config.mjs`**: Cấu hình cho công cụ xử lý CSS (PostCSS) và kiểm tra lỗi mã nguồn (ESLint).
+
+---
+
+## 👤 Tác giả
+
+- **NguyenDuong0609** - [GitHub Profile](https://github.com/NguyenDuong0609)
+
+## 📝 License
+
+Dự án này được cấp phép dưới [MIT License](LICENSE)
