@@ -1,0 +1,19 @@
+services:
+  frontend-prod:
+    container_name: viblo-frontend-prod
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: viblo-clone:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: always
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,26 @@
+services:
+  frontend-dev:
+    container_name: viblo-frontend-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: viblo-clone-dev
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/app
+      # This volume is important to keep the container's node_modules separate from the host's
+      - /app/node_modules
+      # Exclude .next from host mount to improve performance on Windows
+      - /app/.next
+    command: npm run dev
+    restart: unless-stopped
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

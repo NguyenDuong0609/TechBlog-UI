@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Author {
+  id       Int      @id @default(autoincrement())
+  name     String
+  username String   @unique
+  avatar   String
+  bio      String?
+  posts    Post[]
+  series   Series[]
+}
+
+model Category {
+  id    Int    @id @default(autoincrement())
+  name  String
+  slug  String @unique
+  posts Post[]
+}
+
+model Series {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  description String?
+  
+  authorId    Int
+  author      Author   @relation(fields: [authorId], references: [id])
+  
+  posts       Post[]
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Post {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  excerpt     String
+  content     String
+  thumbnail   String
+  readTime    Int      @default(5)
+  views       Int      @default(0)
+  comments    Int      @default(0)
+  bookmarks   Int      @default(0)
+  publishedAt DateTime @default(now())
+  
+  authorId    Int
+  author      Author   @relation(fields: [authorId], references: [id])
+  
+  categoryId  Int
+  category    Category @relation(fields: [categoryId], references: [id])
+  
+  seriesId    Int?
+  series      Series?  @relation(fields: [seriesId], references: [id])
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
