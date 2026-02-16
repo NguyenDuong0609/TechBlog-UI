@@ -1,6 +1,6 @@
-# Viblo Clone Project
+# Technical Blog Project
 
-Dự án này là một bản clone của nền tảng Viblo, được xây dựng bằng các công nghệ web hiện đại nhằm cung cấp trải nghiệm chia sẻ kiến thức công nghệ mượt mà.
+Dự án này là một bản Technical Blog Project, được xây dựng bằng các công nghệ web hiện đại nhằm cung cấp trải nghiệm chia sẻ kiến thức công nghệ mượt mà.
 
 ## 🚀 Hướng dẫn khởi chạy dự án
 
