@@ -18,7 +18,7 @@ export default function ArticleNavigation({ prev, next }: ArticleNavigationProps
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-12 pt-8 border-t border-border/50">
             {prev ? (
                 <Link
-                    href={`/post/${prev.slug}`}
+                    href={`/blog/post/${prev.slug}`}
                     className="group flex flex-col items-start p-6 rounded-2xl border border-border/50 bg-card/30 hover:bg-accent/40 active:scale-[0.99] transition-all duration-300"
                 >
                     <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-2 flex items-center gap-2 group-hover:text-foreground transition-colors">
@@ -34,7 +34,7 @@ export default function ArticleNavigation({ prev, next }: ArticleNavigationProps
 
             {next ? (
                 <Link
-                    href={`/post/${next.slug}`}
+                    href={`/blog/post/${next.slug}`}
                     className="group flex flex-col items-end text-right p-6 rounded-2xl border border-border/50 bg-card/30 hover:bg-accent/40 active:scale-[0.99] transition-all duration-300"
                 >
                     <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-2 flex items-center gap-2 group-hover:text-foreground transition-colors">

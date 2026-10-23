@@ -21,7 +21,7 @@ export default function TopicTagsWidget() {
                 {TOPICS.map((topic) => (
                     <Link
                         key={topic}
-                        href={`/tag/${normalizeSlug(topic)}`}
+                            href={`/blog/tag/${normalizeSlug(topic)}`}
                         className="flex items-center gap-1.5 bg-secondary/50 dark:bg-secondary/30 hover:bg-primary/10 text-neutral-500 dark:text-secondary-foreground hover:text-primary px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 border border-transparent hover:border-primary/20"
                     >
                         <Hash className="h-3 w-3 opacity-40" />

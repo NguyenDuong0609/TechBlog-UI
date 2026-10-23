@@ -153,7 +153,7 @@ export default function ArticleCarousel({ articles, title, titleContent, viewAll
                             style={{ width: itemWidth }}
                         >
                             <Link
-                                href={`/post/${article.slug}`}
+                                href={`/blog/post/${article.slug}`}
                                 className="h-full flex flex-col justify-between"
                                 draggable={false}
                                 onClick={(e) => {

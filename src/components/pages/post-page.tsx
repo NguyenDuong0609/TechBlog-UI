@@ -71,7 +71,7 @@ export default function PostPageClient({ slug }: PostPageClientProps) {
                         <div className="text-6xl mb-4">🔍</div>
                         <h1 className="text-2xl font-bold text-foreground mb-2">Không tìm thấy bài viết</h1>
                         <p className="text-muted-foreground mb-6">Xin lỗi, bài viết với đường dẫn <code className="bg-muted px-1.5 py-0.5 rounded text-primary">/post/{slug}</code> không tồn tại hoặc đã bị gỡ bỏ.</p>
-                        <Link href="/">
+                        <Link href="/blog">
                             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">
                                 Quay lại trang chủ
                             </Button>

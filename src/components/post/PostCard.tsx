@@ -32,7 +32,7 @@ export default function ArticleCard({ article, hideThumbnail = false }: ArticleC
             <div className="flex flex-col md:flex-row">
                 {/* Article Image */}
                 {!hideThumbnail && (
-                    <Link href={`/post/${article.slug}`} className="md:w-1/3 overflow-hidden">
+                <Link href={`/blog/post/${article.slug}`} className="md:w-1/3 overflow-hidden">
                         <div className="aspect-[4/3] md:h-full relative overflow-hidden bg-muted">
                             <img
                                 src={article.thumbnail}
@@ -71,7 +71,7 @@ export default function ArticleCard({ article, hideThumbnail = false }: ArticleC
                             </span>
                         </div>
 
-                        <Link href={`/post/${article.slug}`}>
+                <Link href={`/blog/post/${article.slug}`}>
                             <motion.h2
                                 className="text-[20px] md:text-[24px] font-bold text-foreground mb-3 line-clamp-2 leading-[1.3] transition-colors group-hover:text-primary"
                                 variants={PRESETS.postTitleHover}

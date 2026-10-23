@@ -42,7 +42,7 @@ export default function Tag({
     if (href || name) {
         return (
             <MotionLink
-                href={href || `/tag/${normalizeSlug(name)}`}
+                href={href || `/blog/tag/${normalizeSlug(name)}`}
                 className={baseStyles}
                 variants={PRESETS.postTagHover}
                 initial="initial"

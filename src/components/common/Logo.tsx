@@ -8,7 +8,7 @@ interface LogoProps {
 
 export default function Logo({ className, showText = true }: LogoProps) {
     return (
-        <Link href="/" className={cn("flex items-center gap-2 group", className)}>
+        <Link href="/blog" className={cn("flex items-center gap-2 group", className)}>
             <div className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl bg-primary text-primary-foreground font-black text-xl shadow-lg transition-all duration-300 group-hover:shadow-primary/25 group-hover:scale-105">
                 {/* Minimalist "ND" design */}
                 <span className="relative z-10">ND</span>

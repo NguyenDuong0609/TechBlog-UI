@@ -20,7 +20,7 @@ const footerLinks = {
         { id: "footer-faq", label: "FAQ", href: "/faq" },
     ],
     community: [
-        { id: "footer-newest", label: "Bài viết", href: "/newest" },
+        { id: "footer-newest", label: "Bài viết", href: "/blog" },
         { id: "footer-questions", label: "Hỏi đáp", href: "/questions" },
         { id: "footer-discussion", label: "Thảo luận", href: "/discussion" },
         { id: "footer-series", label: "Series", href: "/series" },
@@ -53,7 +53,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
                     {/* Brand Column */}
                     <div className="lg:col-span-2">
-                        <Link href="/" className="inline-flex items-center gap-3 mb-6">
+                        <Link href="/blog" className="inline-flex items-center gap-3 mb-6">
                             <div className="flex px-3 h-10 items-center justify-center rounded-lg bg-primary text-white font-bold text-xl uppercase tracking-tighter shadow-sm">
                                 ND
                             </div>

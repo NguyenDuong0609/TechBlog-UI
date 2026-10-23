@@ -27,12 +27,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ClientOnly } from "@/components/common/ClientOnly";
 
 const navLinks = [
-    { id: "nav-home", href: "/", label: "Trang Chủ" },
-    { id: "nav-newest", href: "/newest", label: "Bài Viết" },
+    { id: "nav-home", href: "/blog", label: "Trang Chủ" },
+    { id: "nav-newest", href: "/blog", label: "Bài Viết" },
     { id: "nav-series", href: "/series", label: "Series" },
-    { id: "nav-devops", href: "/category/devops", label: "DevOps" },
-    { id: "nav-backend", href: "/category/backend", label: "Backend" },
-    { id: "nav-kubernetes", href: "/category/kubernetes", label: "Kubernetes" },
+    { id: "nav-devops", href: "/blog/category/devops", label: "DevOps" },
+    { id: "nav-backend", href: "/blog/category/backend", label: "Backend" },
+    { id: "nav-kubernetes", href: "/blog/category/kubernetes", label: "Kubernetes" },
 ];
 
 const vibloServices = [
@@ -159,9 +159,13 @@ export default function Header() {
                                         <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                                     </Button>
                                 </DropdownMenuTrigger>
-                                <DropdownMenuContent align="end" className="w-48 bg-popover text-popover-foreground border-border">
+                                <DropdownMenuContent
+                                    align="end"
+                                    className="w-[240px] border-gray-200 bg-white text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:shadow-black/40"
+                                    style={{ borderRadius: 12, boxShadow: "0 4px 12px rgba(15, 23, 42, 0.16)" }}
+                                >
                                     {vibloServices.map((service) => (
-                                        <DropdownMenuItem key={service.id} asChild className="focus:bg-primary/10 focus:text-primary transition-colors">
+                                        <DropdownMenuItem key={service.id} asChild className="py-1.5 text-base leading-6 text-gray-500 transition-colors hover:bg-transparent hover:text-gray-900 focus:bg-transparent focus:text-gray-900 dark:text-gray-300 dark:hover:bg-transparent dark:hover:text-white dark:focus:bg-transparent dark:focus:text-white">
                                             <Link href={service.href} className="cursor-pointer w-full">
                                                 {service.label}
                                             </Link>

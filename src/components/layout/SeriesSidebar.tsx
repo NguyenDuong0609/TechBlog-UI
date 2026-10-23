@@ -56,7 +56,7 @@ export default function SeriesSidebar({ series, currentArticleId }: SeriesSideba
                                 whileHover="hover"
                             >
                                 <Link
-                                    href={`/post/${article.slug}`}
+                                    href={`/blog/post/${article.slug}`}
                                     className={cn(
                                         "flex gap-4 p-5 transition-colors group relative",
                                         isActive ? "bg-primary/5" : "hover:bg-secondary/50"

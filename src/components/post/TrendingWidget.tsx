@@ -64,7 +64,7 @@ export default function TrendingWidget() {
                         whileHover="hover"
                     >
                         <Link
-                            href={`/post/${post.id}`}
+                                href={`/blog/post/${post.id}`}
                             className="group flex gap-4 items-start relative"
                         >
                             <div className="relative">
